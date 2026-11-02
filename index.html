@@ -1,1 +1,23 @@
-
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <title>4 dot website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <meta name="description" content="4 dot">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('sw work', reg.scope))
+            document.title("4 dots offline");
+            .catch(err => console.log('sw fail, ', err));
+        });
+      }
+    </script>
+  </head>
+</html>
