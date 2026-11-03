@@ -1,4 +1,4 @@
-const CACHE_NAME = "4dot-off-v1";
+const CACHE_NAME = "4dot-off-v2";
 const OFFLINE_URLS = [
   "/",
   "/index.html",
